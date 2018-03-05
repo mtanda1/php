@@ -1,0 +1,26 @@
+<?php 
+	//mydb | Music db with table called music
+	//make database connection here
+
+	//require_once 'login.php';
+	$conn = new mysqli('127.0.0.1', 'root', 'wildfire679' , 'mydb', 3306);
+	// Check connection
+	if ($conn->connect_error) {
+    	die("Connection failed: " . $conn->connect_error);
+	} 
+	echo "Connected successfully";
+
+
+	
+ ?>
+<h1>Add a song to the table</h1>
+<form action="#" method="post">
+ 	<label for="song_title">Enter song name:</label>
+ 	<input type="text" name="song_title"><br>
+ 	<label for="by">Author of the song:</label>
+ 	<input type="text" name="by"><br>
+ 	<label for="time">time in seconds:</label>
+ 	<input type="int" name="time"><br>
+
+ 	<input type="submit" value="Submit">
+</form>
